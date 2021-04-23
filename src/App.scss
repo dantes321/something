@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.app-wrapper{
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: 1200px) {
+    max-width: 970px;
+  }
+  @media (max-width: 970px) {
+    max-width: 667px;
+  }
+  @media (max-width: 667px) {
+    max-width: none;
+  }
+
+
+
+}
