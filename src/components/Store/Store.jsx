@@ -15,6 +15,7 @@ const Store = () => {
         <StoreContextProvider>
         <Products/>
         </StoreContextProvider>
+        <div className={s.footer}>2020 © React Store</div>
     </div>
   );
 };

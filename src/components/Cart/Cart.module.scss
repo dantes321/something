@@ -1,0 +1,79 @@
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  .contentContainer{
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    width: 100%;
+    grid-gap: 10px;
+
+    .products{
+
+    }
+    .counters{
+      max-height: 250px;
+      padding: 15px 10px;
+      border: 1px solid gray;
+      .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        a{
+          display: block;
+          margin: 0 5px;
+          font-size: 12px;
+          padding: 15px 25px;
+          opacity: .9;
+          background: black;
+          text-decoration: none;
+          color: white;
+          transition: .2s ease;
+        }
+        a:last-child{
+          background: none;
+          color: dimgray;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+        a:hover{
+          opacity: 1;
+        }
+      }
+      .totalItem{
+        color: gray;
+        margin: 8px 0;
+
+      }
+      .totalPay{
+        color: gray;
+        margin: 8px 0;
+      }
+      div:last-child{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .title{
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 4px;
+  }
+  .subtitle{
+    color: gray;
+    margin: 15px 0 35px 0;
+  }
+  .footer{
+    color: gray;
+    margin-top: 50px;
+  }
+  .empty{
+    font-size: 15px;
+    opacity: .8;
+    color: gray;
+    margin: 15px 0 20px 0;
+  }
+}

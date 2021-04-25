@@ -11,6 +11,18 @@
         color: black;
         text-decoration: none;
       }
+      .cart{
+        position: relative;
+      }
+      .cart:before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 4px;
+        left: -20px;
+        background: url("https://img.icons8.com/material/452/shopping-cart--v1.png") 50%/cover no-repeat;
+      }
     }
   }
 }

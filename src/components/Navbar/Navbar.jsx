@@ -1,18 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from './Navbar.module.scss';
+import {NavLink} from "react-router-dom";
+import {StoreContext} from "../../context/store-context";
 
 const Navbar = () => {
+  let {state} = useContext(StoreContext);
   return (
     <div className={s.navbar}>
       <ul>
         <li>
-          <a href='#'>Store</a>
+          <NavLink to='/store'>Store</NavLink>
         </li>
         <li>
-          <a href='#'>About</a>
+          <NavLink to='/about'>About</NavLink>
         </li>
         <li>
-          <a href='#'>Cart(0)</a>
+          <NavLink className = {s.cart} to='/cart'>Cart({state.cartItems.length})</NavLink>
         </li>
       </ul>
     </div>

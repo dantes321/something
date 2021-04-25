@@ -4,9 +4,9 @@ import Product from './Product/Product';
 import { StoreContext } from '../../../context/store-context';
 
 const Products = () => {
-  const { state } = useContext(StoreContext);
+  const { state,dispatch } = useContext(StoreContext);
   let products = state.cards.map((el) => (
-    <Product  key ={el.id} img={el.img} title={el.title} price={el.price} />
+    <Product id ={el.id} dispatch = {dispatch}  key ={el.id} img={el.img} title={el.title} price={el.price} />
   ));
   return <div className={s.products}>{products}</div>;
 };
