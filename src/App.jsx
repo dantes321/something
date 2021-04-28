@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Cart from './components/Cart/Cart';
 import { StoreContextProvider } from './context/store-context';
 
+
 const App = () => {
   return (
     <div className='app-wrapper'>

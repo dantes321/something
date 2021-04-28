@@ -4,6 +4,7 @@ import Product from './Product/Product';
 import { StoreContext } from '../../context/store-context';
 
 const Cart = () => {
+
   let { state } = useContext(StoreContext);
   let cartItemsArr = state.cartItems.map((el) => {
     return <Product img={el.img} price={el.price} key={el.id} title={el.title} />;

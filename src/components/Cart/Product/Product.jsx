@@ -2,8 +2,10 @@ import React from 'react';
 import s from './Product.module.scss';
 
 const Product = ({img,price,title}) => {
+
   return (
     <div className={s.product}>
+
       <img src={img} />
       <div className={s.titlePrice}>
         <div className={s.title}>{title}</div>

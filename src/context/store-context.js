@@ -41,7 +41,13 @@ let initialState = {
       counter: 1,
     },
   ],
-  cartItems: [],
+  cartItems: [{
+    id: 1,
+    img: 'https://react-shooping-cart.netlify.app/img/1.jpg?v=1',
+    title: 'Buffalo - Striploin',
+    price: 35,
+    counter: 1,
+  },],
 };
 
 export const StoreContextProvider = ({ children }) => {
