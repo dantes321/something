@@ -4,10 +4,9 @@ import Product from './Product/Product';
 import { StoreContext } from '../../context/store-context';
 
 const Cart = () => {
-
   let { state } = useContext(StoreContext);
-  let cartItemsArr = state.cartItems.map((el) => {
-    return <Product img={el.img} price={el.price} key={el.id} title={el.title} />;
+  let cartItemsArr = state.cartItems.map((el, index) => {
+    return <Product img={el.img} price={el.price} key={index} title={el.title} />;
   });
 
   if (state.cartItems.length === 0) {
@@ -25,9 +24,7 @@ const Cart = () => {
         <div className={s.title}>CART</div>
         <div className={s.subtitle}>This is the Cart Page.</div>
         <div className={s.contentContainer}>
-          <div className={s.products}>
-              {cartItemsArr}
-          </div>
+          <div className={s.products}>{cartItemsArr}</div>
           <div className={s.counters}>
             <div className={s.info}>
               <div className={s.totalItem}>Total Items</div>

@@ -1,7 +1,6 @@
 import React from 'react';
-import s from './Store.module.scss'
-import Products from "./Products/Products";
-import {StoreContextProvider} from "../../context/store-context";
+import s from './Store.module.scss';
+import Products from './Products/Products';
 
 const Store = () => {
   return (
@@ -12,10 +11,8 @@ const Store = () => {
         <span>10 Products</span>
         <input placeholder='Search product' type='text' />
       </div>
-        <StoreContextProvider>
-        <Products/>
-        </StoreContextProvider>
-        <div className={s.footer}>2020 © React Store</div>
+      <Products />
+      <div className={s.footer}>2020 © React Store</div>
     </div>
   );
 };
