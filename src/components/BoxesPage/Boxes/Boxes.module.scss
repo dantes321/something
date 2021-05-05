@@ -1,0 +1,41 @@
+.boxes{
+  flex: 1 1 33%;
+  padding: 0 10px;
+  text-align: center;
+
+    a{
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: 11px 31px;
+      background: black;
+      color: white;
+      display: inline-block;
+      margin: 10px 0;
+      text-align: center;
+      cursor: pointer;
+
+  }
+  .body {
+    margin-bottom: 20px;
+    height: 500px;
+    img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+
+    }
+
+    .subtitle {
+      font-size: 25px;
+      font-weight: 600;
+      word-break: break-word;
+      max-width: 300px;
+      margin: 0 auto;
+
+    }
+  }
+}

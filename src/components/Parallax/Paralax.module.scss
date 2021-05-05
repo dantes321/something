@@ -7,12 +7,7 @@
   left: 0;
   right: 0;
   z-index: -1;
-  @media (max-height: 700px) {
-    height: 135%;
-  }
-  @media (max-height: 600px) {
-    height: 140%;
-  }
+
 
   .parallaxBody{
     color: white;
@@ -31,8 +26,8 @@
       font-size:65px;
       font-weight: 600;
       margin: 20px 0;
-      @media (max-width: 400px) {
-        font-size: 45px;
+      @media (max-width: 560px) {
+        font-size: 35px;
       }
     }
     .description{
@@ -40,8 +35,8 @@
       font-size: 22px;
       margin:20px 0;
       word-break: break-word;
-      @media (max-width: 400px) {
-        font-size: 19px;
+      @media (max-width: 560px) {
+        font-size: 15px;
       }
     }
     a{
@@ -55,6 +50,7 @@
       font-weight: 500;
       display: inline-block;
       transition: .3s ease-in-out;
+      cursor: pointer;
 
       &:hover{
         background: white;
