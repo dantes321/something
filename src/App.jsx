@@ -1,26 +1,19 @@
-import './App.scss';
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Store from './components/Store/Store';
-import { BrowserRouter, Route } from 'react-router-dom';
-import About from './components/About/About';
-import Cart from './components/Cart/Cart';
-import { StoreContextProvider } from './context/store-context';
-
+import './App.module.scss';
+import s from './App.module.scss';
+import Parallax from "./components/Parallax/Paralax";
+import Header from "./components/Header/Header";
+import BoxesPage from "./components/BoxesPage/BoxesPage";
 
 const App = () => {
-  return (
-    <div className='app-wrapper'>
-      <BrowserRouter>
-        <StoreContextProvider>
-          <Navbar />
-          <Route path='/store' component={Store} />
-          <Route path='/about' component={About} />
-          <Route path='/cart' component={Cart} />
-        </StoreContextProvider>
-      </BrowserRouter>
-    </div>
-  );
-};
+    return (
+        <div className={s.appWrapper}>
+            <Header />
+            <Parallax />
+            <BoxesPage />
 
+
+        </div>
+    )
+}
 export default App;

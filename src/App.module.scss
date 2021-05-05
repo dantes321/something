@@ -5,11 +5,12 @@
 
 }
 
-.app-wrapper{
+
+.appWrapper {
   overflow: hidden;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 15px;
   @media (max-width: 1200px) {
     max-width: 970px;
   }
@@ -19,7 +20,5 @@
   @media (max-width: 667px) {
     max-width: none;
   }
-
-
 
 }

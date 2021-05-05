@@ -1,0 +1,124 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .burger{
+    display: none;
+    transition: .5s ease-in-out;
+
+
+
+    @media (max-width: 615px) {
+      display: block;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      opacity: .8;
+
+      &.active{
+        &:before{
+          transform: rotate(45deg);
+          top: 32px;
+        }
+        &:after{
+          transform: rotate(-45deg);
+          top: 32px;
+        }
+      }
+
+      &:before{
+        content: '';
+        width: 50px;
+        height: 3px;
+        background: white;
+        position: absolute;
+        top: 25px;
+        left: 10px;
+        transition: .5s;
+
+
+      }
+      &:after{
+        transition: .5s;
+        content: '';
+        width: 50px;
+        height: 3px;
+        background: white;
+        position: absolute;
+        top: 45px;
+        left: 10px;
+
+      }
+    }
+  }
+  .headerLogo{
+    img{
+      @media (max-width: 600px) {
+        width: 100px;
+        object-fit: contain;
+        height: 100px;
+      }
+    }
+  }
+  .nav{
+    @media (max-width: 615px) {
+      position: absolute;
+      transform: translateX(-1100px) ;
+      transition: .4s ease-in-out;
+
+
+      &.active{
+        transform: translateX(-50px);
+      }
+    }
+    ul{
+
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 615px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background: gray;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 400px;
+        border-radius: 20px;
+        z-index: 20;
+      }
+
+
+      li{
+        list-style: none;
+        margin: 0 15px;
+        @media (max-width: 615px) {
+          margin: 20px 15px;
+
+        }
+
+        a{
+          text-decoration: none;
+          color: white;
+          font-size: 23px;
+          transition: .3s ease-in-out;
+          border: 1px solid transparent;
+          padding: 8px 10px;
+          @media (min-width: 982px) {
+            &:hover{
+              border: 1px solid white;
+
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}
