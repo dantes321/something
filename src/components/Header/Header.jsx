@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import s from './Header.module.scss';
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
   const [activeMenu,setActiveMenu] = useState(false)
@@ -12,19 +13,19 @@ const Header = () => {
       <nav className={activeMenu? `${s.nav} ${s.active}`:s.nav}>
         <ul>
           <li>
-            <a href='#'>Каталог</a>
+            <NavLink to='/store'>Каталог</NavLink>
           </li>
           <li>
-            <a href='#'>Галерея</a>
+            <NavLink to='/cart'>Галерея</NavLink>
           </li>
           <li>
-            <a href='#'>Блог</a>
+            <NavLink to='#'>Блог</NavLink>
           </li>
           <li>
-            <a href='#'>Контакты</a>
+            <NavLink to='#'>Контакты</NavLink>
           </li>
           <li>
-            <a href='#'>Доставка и оплата</a>
+            <NavLink to='#'>Доставка и оплата</NavLink>
           </li>
         </ul>
       </nav>

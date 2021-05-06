@@ -5,9 +5,16 @@ import Boxes from './Boxes/Boxes';
 import { StoreContext } from '../../contexts/store-context';
 
 const BoxesPage = () => {
-  const { state } = useContext(StoreContext);
+  const { state, dispatch } = useContext(StoreContext);
   let box = state.boxes.map((el) => (
-    <Boxes img={el.img} price={el.price} title={el.title} subtitle={el.subtitle} />
+    <Boxes
+      dispatch={dispatch}
+      id={el.id}
+      img={el.img}
+      price={el.price}
+      title={el.title}
+      subtitle={el.subtitle}
+    />
   ));
 
   return (
@@ -31,9 +38,7 @@ const BoxesPage = () => {
           Для нее
         </NavLink>
       </div>
-        <div className={s.boxes}>
-      {box}
-        </div>
+      <div className={s.boxes}>{box}</div>
     </div>
   );
 };
