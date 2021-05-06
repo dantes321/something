@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import s from './Header.module.scss';
 import {NavLink} from "react-router-dom";
+import {StoreContext} from "../../contexts/store-context";
 
 const Header = () => {
   const [activeMenu,setActiveMenu] = useState(false)
+  const {state} = useContext(StoreContext)
 
   return (
     <div className={s.header}>
@@ -16,7 +18,7 @@ const Header = () => {
             <NavLink to='/store'>Каталог</NavLink>
           </li>
           <li>
-            <NavLink to='/cart'>Галерея</NavLink>
+            <NavLink to='#'>Галерея</NavLink>
           </li>
           <li>
             <NavLink to='#'>Блог</NavLink>
@@ -27,6 +29,7 @@ const Header = () => {
           <li>
             <NavLink to='#'>Доставка и оплата</NavLink>
           </li>
+          <li><NavLink className = {s.length} to='/cart'>{state.cartItems.length}</NavLink></li>
         </ul>
       </nav>
       <span onClick={() => setActiveMenu(!activeMenu)} className={activeMenu? `${s.burger} ${s.active}`:s.burger}> </span>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.module.scss';
 import s from './App.module.scss';
 import Parallax from './components/Parallax/Paralax';
@@ -9,13 +9,15 @@ import { StoreContextProvider } from './contexts/store-context';
 import Cart from "./components/Cart/Cart";
 
 const App = () => {
+
   return (
     <div className={s.appWrapper}>
       <BrowserRouter>
-        <Header />
+
         <Route path='/store' component={Parallax}/>
 
         <StoreContextProvider>
+            <Header  />
           <Route path = '/cart' component={Cart}/>
           <Route path = '/store' component={BoxesPage}/>
         </StoreContextProvider>

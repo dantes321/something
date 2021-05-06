@@ -1,55 +1,77 @@
-.cartItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
-.cart {
-  margin-top: 40px;
+.cartContainer{
 
-
-
-  h1 {
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: 400;
+  .title{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 10px;
+    border: 1px solid gray;
+    max-height: 50px;
+    display: grid;
+    grid-template-columns: 6fr 2fr 2fr 2fr;
+    place-items: center;
+    background: rgba(0,0,0,0.1);
+    font-size: 20px;
+    font-weight: 700;
+    color: gray;
+    div{
+      margin: 0 10px;
+    }
+  }
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
-  .field {
-    width: 100%;
-    margin-top: 20px;
-    height: 80px;
-    background: rgba(0, 0, 0, .1);
-    position: relative;
-    font-size: 25px;
-    color: gray;
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
+  .cart {
+    margin-top: 40px;
 
-    span {
-      &:after {
-        content: '';
-        border: 2px solid chocolate;
-        border-top: 5px solid chocolate;
-        position: absolute;
-        top: 28px;
-        left: 20px;
-        width: 18px;
-        height: 18px;
-      }
+
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 400;
     }
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 3px;
+    .field {
       width: 100%;
-      background: chocolate;
+      margin-top: 20px;
+      height: 80px;
+      background: rgba(0, 0, 0, .1);
+      position: relative;
+      font-size: 25px;
+      color: gray;
+      display: flex;
+      align-items: center;
+      padding-left: 60px;
+
+      span {
+        &:after {
+          content: '';
+          border: 2px solid chocolate;
+          border-top: 5px solid chocolate;
+          position: absolute;
+          top: 28px;
+          left: 20px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: chocolate;
+      }
     }
   }
 }

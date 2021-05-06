@@ -10,6 +10,7 @@ let initialState = {
       title: 'SECRET BOX',
       subtitle: 'Один из самых популярных сюрприз-боксов',
       img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/secret-box-600x596.jpg',
+      quantity: 1,
     },
     {
       id: 2,
@@ -18,6 +19,7 @@ let initialState = {
       subtitle: 'Коробка с сокровищами для тех, кто любит разнообразные девайсы и гаджеты.',
       img:
         'https://www.giftfactory.org.ua/wp-content/uploads/2020/11/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82-%D0%B1%D0%BE%D0%BA%D1%81-600x593.jpg',
+      quantity: 1,
     },
     {
       id: 3,
@@ -25,6 +27,7 @@ let initialState = {
       title: 'GIRL BOX',
       subtitle: 'Отличная идея подарка для девушки, подружки, одноклассницы или сестры',
       img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/girls-box-600x591.jpg',
+      quantity: 1,
     },
     {
       id: 4,
@@ -32,6 +35,7 @@ let initialState = {
       title: 'BOY BOX',
       subtitle: 'Отличная идея подарка для парня, друга, сына или брата',
       img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/boy-box-600x594.jpg',
+      quantity: 1,
     },
     {
       id: 5,
@@ -39,6 +43,7 @@ let initialState = {
       title: 'CANDY BOX',
       subtitle: 'Наш фирменный сюрприз-бокс для настоящих сладкоежек',
       img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/sweet-box-1-600x593.jpg',
+      quantity: 1,
     },
     {
       id: 6,
@@ -47,20 +52,21 @@ let initialState = {
       subtitle:
         'Косметика, духи, аксессуары, косметички и многое другое может оказаться внутри этого бокса',
       img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/beauty-box.jpg',
+      quantity: 1,
     },
   ],
   cartItems: [],
 };
 
 const storage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-initialState = {...initialState, cartItems: storage};
+initialState = { ...initialState, cartItems: storage };
 
 export const StoreContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(storeReducer, initialState)
+  const [state, dispatch] = useReducer(storeReducer, initialState);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(state.cartItems));
-  },[state.cartItems]);
+  }, [state.cartItems]);
 
   return <StoreContext.Provider value={{ state, dispatch }}>{children}</StoreContext.Provider>;
 };
