@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/something/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/something/static/js/main.5f4f48e7.chunk.js",
-    "main.js.map": "/something/static/js/main.5f4f48e7.chunk.js.map",
-    "runtime-main.js": "/something/static/js/runtime-main.c29148ad.js",
-    "runtime-main.js.map": "/something/static/js/runtime-main.c29148ad.js.map",
-    "static/js/2.47fefaf9.chunk.js": "/something/static/js/2.47fefaf9.chunk.js",
-    "static/js/2.47fefaf9.chunk.js.map": "/something/static/js/2.47fefaf9.chunk.js.map",
-    "static/js/3.7bb7368f.chunk.js": "/something/static/js/3.7bb7368f.chunk.js",
-    "static/js/3.7bb7368f.chunk.js.map": "/something/static/js/3.7bb7368f.chunk.js.map",
-    "index.html": "/something/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/something/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.47fefaf9.chunk.js.LICENSE.txt": "/something/static/js/2.47fefaf9.chunk.js.LICENSE.txt"
+    "main.css": "/dantes321/newstore/static/css/main.14057131.chunk.css",
+    "main.js": "/dantes321/newstore/static/js/main.b1884644.chunk.js",
+    "main.js.map": "/dantes321/newstore/static/js/main.b1884644.chunk.js.map",
+    "runtime-main.js": "/dantes321/newstore/static/js/runtime-main.2b8dec65.js",
+    "runtime-main.js.map": "/dantes321/newstore/static/js/runtime-main.2b8dec65.js.map",
+    "static/js/2.28276154.chunk.js": "/dantes321/newstore/static/js/2.28276154.chunk.js",
+    "static/js/2.28276154.chunk.js.map": "/dantes321/newstore/static/js/2.28276154.chunk.js.map",
+    "index.html": "/dantes321/newstore/index.html",
+    "static/css/main.14057131.chunk.css.map": "/dantes321/newstore/static/css/main.14057131.chunk.css.map",
+    "static/js/2.28276154.chunk.js.LICENSE.txt": "/dantes321/newstore/static/js/2.28276154.chunk.js.LICENSE.txt",
+    "static/media/1.40b4fcca.jpg": "/dantes321/newstore/static/media/1.40b4fcca.jpg",
+    "static/media/2.a32811e6.jpg": "/dantes321/newstore/static/media/2.a32811e6.jpg",
+    "static/media/3.219c26c5.jpg": "/dantes321/newstore/static/media/3.219c26c5.jpg",
+    "static/media/4.fad22d76.jpg": "/dantes321/newstore/static/media/4.fad22d76.jpg",
+    "static/media/5.02979f39.jpg": "/dantes321/newstore/static/media/5.02979f39.jpg",
+    "static/media/6.1f6f82d9.jpg": "/dantes321/newstore/static/media/6.1f6f82d9.jpg",
+    "static/media/7.5de95724.jpg": "/dantes321/newstore/static/media/7.5de95724.jpg",
+    "static/media/8.090142c9.jpg": "/dantes321/newstore/static/media/8.090142c9.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c29148ad.js",
-    "static/js/2.47fefaf9.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.5f4f48e7.chunk.js"
+    "static/js/runtime-main.2b8dec65.js",
+    "static/js/2.28276154.chunk.js",
+    "static/css/main.14057131.chunk.css",
+    "static/js/main.b1884644.chunk.js"
   ]
 }
