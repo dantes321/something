@@ -1,0 +1,43 @@
+.box{
+  flex: 1 1 30%;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  img {
+    margin-top: 15px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: .2s linear;
+
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    padding: 5px 10px;
+    background: #0d160b;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 2px 3px 2px rgba(0,0,0,.5);
+
+    &:hover{
+      animation: shake .8s ease-in-out;
+      @keyframes shake {
+        0%{
+          transform: rotateX(0);
+        }
+        50%{
+          transform: rotateX(180deg);
+        }
+        100% {
+          transform: rotateX(360deg);
+        }
+      }
+    }
+
+  }
+}

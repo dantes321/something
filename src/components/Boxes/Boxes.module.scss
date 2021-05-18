@@ -1,0 +1,23 @@
+.boxes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+
+  .boxesContainer{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  span{
+    color: #de9d12;
+  }
+  .title{
+    font-size: 28px;
+  }
+}

@@ -1,72 +1,86 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import storeReducer from './store-reducer';
+import img1 from './../assets/1.jpg';
+import img2 from './../assets/2.jpg';
+import img3 from './../assets/3.jpg';
+import img4 from './../assets/4.jpg';
+import img5 from './../assets/5.jpg';
+import img6 from './../assets/6.jpg';
+import img7 from './../assets/7.jpg';
+import img8 from './../assets/8.jpg';
 
-export const StoreContext = React.createContext(null);
+export const StoreContext = React.createContext();
+
 let initialState = {
   boxes: [
     {
       id: 1,
-      price: 30.99,
-      title: 'SECRET BOX',
-      subtitle: 'Один из самых популярных сюрприз-боксов',
-      img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/secret-box-600x596.jpg',
-      quantity: 1,
+      img: img1,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 100,
+      counter: 1,
     },
     {
       id: 2,
-      price: 25.99,
-      title: 'GADGET BOX',
-      subtitle: 'Коробка с сокровищами для тех, кто любит разнообразные девайсы и гаджеты.',
-      img:
-        'https://www.giftfactory.org.ua/wp-content/uploads/2020/11/%D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82-%D0%B1%D0%BE%D0%BA%D1%81-600x593.jpg',
-      quantity: 1,
+      img: img2,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 150,
+      counter: 1,
     },
     {
       id: 3,
-      price: 21.99,
-      title: 'GIRL BOX',
-      subtitle: 'Отличная идея подарка для девушки, подружки, одноклассницы или сестры',
-      img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/girls-box-600x591.jpg',
-      quantity: 1,
+      img: img3,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 220,
+      counter: 1,
     },
     {
       id: 4,
-      price: 31.99,
-      title: 'BOY BOX',
-      subtitle: 'Отличная идея подарка для парня, друга, сына или брата',
-      img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/boy-box-600x594.jpg',
-      quantity: 1,
+      img: img4,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 235,
+      counter: 1,
     },
     {
       id: 5,
-      price: 21.59,
-      title: 'CANDY BOX',
-      subtitle: 'Наш фирменный сюрприз-бокс для настоящих сладкоежек',
-      img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/sweet-box-1-600x593.jpg',
-      quantity: 1,
+      img: img5,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 155,
+      counter: 1,
     },
     {
       id: 6,
-      price: 24.59,
-      title: 'BEAUTY BOX',
-      subtitle:
-        'Косметика, духи, аксессуары, косметички и многое другое может оказаться внутри этого бокса',
-      img: 'https://www.giftfactory.org.ua/wp-content/uploads/2020/09/beauty-box.jpg',
-      quantity: 1,
+      img: img6,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 290,
+      counter: 1,
+    },
+    {
+      id: 7,
+      img: img7,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 300,
+      counter: 1,
+    },
+    {
+      id: 8,
+      img: img8,
+      title: 'Название бокса',
+      description: 'Описание бокса',
+      price: 330,
+      counter: 1,
     },
   ],
-  cartItems: [],
 };
-
-const storage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-initialState = { ...initialState, cartItems: storage };
 
 export const StoreContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(storeReducer, initialState);
-
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(state.cartItems));
-  }, [state.cartItems]);
-
   return <StoreContext.Provider value={{ state, dispatch }}>{children}</StoreContext.Provider>;
 };
