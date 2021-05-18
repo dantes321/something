@@ -5,6 +5,20 @@
   width: 100%;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+
+  @media (max-width: 1000px) {
+    max-width: 970px;
+  }
+  @media (max-width: 970px) {
+    max-width: 667px;
+  }
+  @media (max-width: 667px) {
+    max-width: none;
+  }
 
   .boxesContainer{
     width: 100%;
@@ -19,6 +33,6 @@
   }
   .title{
     font-size: 28px;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }

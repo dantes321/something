@@ -4,7 +4,7 @@ const Box = ({price,title,id,img,description}) => {
   return <div className={s.box}>
     <img src={img}/>
     <div className={s.title}>{title}</div>
-    <div className={s.price}>{price}</div>
+    <div className={s.price}>{price} грн</div>
     <a href='#'>Заказать</a>
   </div>;
 };

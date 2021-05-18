@@ -111,20 +111,27 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-
-      span {
-        color: white;
-        font-size: 24px;
-        font-weight: 600;
+      justify-content: center;
+      a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        span {
+          color: white;
+          font-size: 24px;
+          font-weight: 600;
+        }
+        img {
+          margin-right: 10px;
+          width: 40px;
+          height: 40px;
+          color: white;
+          object-fit: cover;
+        }
       }
 
-      img {
-        margin-right: 10px;
-        width: 40px;
-        height: 40px;
-        color: white;
-        object-fit: cover;
-      }
     }
 
     .nav {
@@ -133,10 +140,11 @@
         top: 0;
         right: 0;
         z-index: 222;
-        display: none;
+        transition: .3s linear;
+        transform: translateX(300px);
 
         &.active{
-          display: block;
+          transform: translateX(0);
         }
 
       }

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import s from './Navbar.module.scss';
 
 const Navbar = () => {
-  let toggleMenu = (e) =>{
+  let toggleMenu = (e) => {
     setActiveBurger(!activeBurger);
-    setActiveMenu(!activeMenu)
-    e.preventDefault()
-  }
+    setActiveMenu(!activeMenu);
+    e.preventDefault();
+  };
 
   const [activeBurger, setActiveBurger] = useState(false);
   const [activeMenu, setActiveMenu] = useState(false);
@@ -19,8 +19,8 @@ const Navbar = () => {
             <span>Сюрприз</span> боксы и <span>подарочные</span> наборы
           </div>
         </div>
-        {
-          activeMenu? <nav className={activeMenu? `${s.nav} ${s.active}`:s.nav}>
+        {activeMenu ? (
+          <nav className={activeMenu ? `${s.nav} ${s.active}` : s.nav}>
             <ul>
               <li>
                 <a href='#'>Главная</a>
@@ -34,7 +34,7 @@ const Navbar = () => {
               <li>
                 <a href='#'>Галерея</a>
               </li>
-              <hr/>
+              <hr />
               <li>
                 <a href='#'>Доставка и оплата</a>
               </li>
@@ -48,35 +48,35 @@ const Navbar = () => {
                 <a href='#'>Телефон,VIBER</a>
               </li>
             </ul>
-
-          </nav>:
-            <nav className={s.nav}>
-              <ul>
-                <li>
-                  <a href='#'>Галерея фото</a>
-                </li>
-                <li>
-                  <a href='#'>Конструктор</a>
-                </li>
-                <li>
-                  <a href='#'>Отзывы</a>
-                </li>
-                <li>
-                  <a href='#'>Сотрудничество</a>
-                </li>
-              </ul>
-
-            </nav>
-        }
+          </nav>
+        ) : (
+          <nav className={s.nav}>
+            <ul>
+              <li>
+                <a href='#'>Галерея фото</a>
+              </li>
+              <li>
+                <a href='#'>Конструктор</a>
+              </li>
+              <li>
+                <a href='#'>Отзывы</a>
+              </li>
+              <li>
+                <a href='#'>Сотрудничество</a>
+              </li>
+            </ul>
+          </nav>
+        )}
         <div className={s.cart}>
-          <img src='https://icon-library.com/images/shopping-cart-icon-white/shopping-cart-icon-white-11.jpg' />
-          <span>(0)</span>
+          <a href='/cart'>
+            <img src='https://icon-library.com/images/shopping-cart-icon-white/shopping-cart-icon-white-11.jpg' />
+            <span>(0)</span>
+          </a>
         </div>
       </div>
-      <span
-        onClick={toggleMenu}
-        className={activeBurger ? `${s.burger} ${s.active}` : s.burger}
-      > </span>
+      <span onClick={toggleMenu} className={activeBurger ? `${s.burger} ${s.active}` : s.burger}>
+        {' '}
+      </span>
     </div>
   );
 };

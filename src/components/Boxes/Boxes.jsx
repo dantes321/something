@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import s from './Boxes.module.scss';
 import { StoreContext } from '../../contexts/store-context';
 import Box from './Box/Box';
+import Parallax from '../Parallax/Parallax';
 
 const Boxes = () => {
   const { state } = useContext(StoreContext);
@@ -19,6 +20,8 @@ const Boxes = () => {
   });
 
   return (
+    <>
+      <Parallax />
     <div className={s.boxes}>
       <div className={s.title}>
         Тематические <span>Сюрприз Боксы</span>
@@ -27,6 +30,7 @@ const Boxes = () => {
         {boxContainer}
       </div>
     </div>
+      </>
   );
 };
 

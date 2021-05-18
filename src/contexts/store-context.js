@@ -78,6 +78,8 @@ let initialState = {
       counter: 1,
     },
   ],
+  cartItems: [],
+
 };
 
 export const StoreContextProvider = ({ children }) => {
