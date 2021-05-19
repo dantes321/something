@@ -5,10 +5,12 @@ import Box from './Box/Box';
 import Parallax from '../Parallax/Parallax';
 
 const Boxes = () => {
-  const { state } = useContext(StoreContext);
+  const { state,dispatch } = useContext(StoreContext);
   let boxContainer = state.boxes.map((el, index) => {
     return (
       <Box
+        state ={state}
+        dispatch ={dispatch}
         key={index}
         id={el.id}
         price={el.price}

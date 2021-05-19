@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import storeReducer from './store-reducer';
 import img1 from './../assets/1.jpg';
 import img2 from './../assets/2.jpg';
@@ -9,7 +9,9 @@ import img6 from './../assets/6.jpg';
 import img7 from './../assets/7.jpg';
 import img8 from './../assets/8.jpg';
 
-export const StoreContext = React.createContext();
+export const StoreContext = React.createContext(null);
+
+
 
 let initialState = {
   boxes: [
@@ -79,10 +81,16 @@ let initialState = {
     },
   ],
   cartItems: [],
-
 };
+let cartEl = localStorage.getItem('cart');
+let storage = cartEl ? JSON.parse(cartEl) : [];
+initialState = { ...initialState, cartItems: storage };
 
 export const StoreContextProvider = ({ children }) => {
+
   const [state, dispatch] = useReducer(storeReducer, initialState);
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(state.cartItems));
+  }, [state.cartItems]);
   return <StoreContext.Provider value={{ state, dispatch }}>{children}</StoreContext.Provider>;
 };

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import s from './Navbar.module.scss';
+import { StoreContext } from '../../contexts/store-context';
 
 const Navbar = () => {
+  const {state} = useContext(StoreContext)
   let toggleMenu = (e) => {
     setActiveBurger(!activeBurger);
     setActiveMenu(!activeMenu);
@@ -14,7 +16,7 @@ const Navbar = () => {
     <div className={s.navbar}>
       <div className={s.navbarInner}>
         <div className={s.logo}>
-          <img src='#' />
+          <a href='/store'><img src='#'  alt=''/></a>
           <div className={s.desc}>
             <span>Сюрприз</span> боксы и <span>подарочные</span> наборы
           </div>
@@ -70,7 +72,7 @@ const Navbar = () => {
         <div className={s.cart}>
           <a href='/cart'>
             <img src='https://icon-library.com/images/shopping-cart-icon-white/shopping-cart-icon-white-11.jpg' />
-            <span>(0)</span>
+            <span>({state.cartItems.length})</span>
           </a>
         </div>
       </div>
